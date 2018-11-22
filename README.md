@@ -1,18 +1,19 @@
-# jquery.qqface
+# jquery.enhanced_qqface
 
-jQuery QQ 表情插件。     
-点击一个按钮，弹出一个选择QQ表情的组件，点击即可选择表情，以文字形式插入到textara里面，或者以图像形式插入到你想要的区域。
+基于jQuery的QQ表情包插件加强版。     
+点击弹出选择组件，即可选择QQ表情，以文字形式插入到textara，或者以图像形式插入到你想要的地方。
 
 # 使用方法
 1. 引入jQuery
-2. 引入jquery.qqface.js
+2. 引入jquery.enhanced_qqface.min.js
+2. 引入jquery.enhanced_qqface.css
 
 # 在html添加以下内容
 ```
 <div>
     <textarea id="liveChatContent" spellcheck="false"></textarea>
 </div>
-<div id="emoji_area"></div>
+<div contenteditable="true" id="emoji_area"></div>
 <a href="javascript:;" id="face">表情</a>
 
 ```
@@ -21,8 +22,8 @@ jQuery QQ 表情插件。
 ```js
 //按照以下方法引入即可
 $.qqface({
-    imgPath: 'gif/',    // gif的文件路径
-    handle: $('#face'),  // 表情包按钮
+    imgPath: 'gif/',    // gif的文件路径（绝对路径）
+    handle: $('#face'),  // 表情包弹出按钮
     textarea: $('#liveChatContent'),  // 以文字形式显示表情包的地方
     emoji_area: $('#emoji_area')  // 以图像形式显示表情包的地方
 });
